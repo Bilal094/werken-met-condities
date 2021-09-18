@@ -8,7 +8,7 @@ print('| je een tent bij je en een slaapzak. Het is op dit moment het heetste mo
 print('---------------------------------------------------------------------------------------------')
 Munten = 25
 from time import sleep
-sleep(1)
+sleep(20)
 print('Level-1: Je loopt al een eindje door het zand en er blijkt geen hoop te zijn. Wat doe je nu?')
 from time import sleep
 sleep(2.5)
