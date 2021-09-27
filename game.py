@@ -1,3 +1,5 @@
+Munten = 1
+Health = 100
 print('---------------------------------------------------------------------------------------------')
 print('| Als toerist lijkt je het leuk om op trip te gaan naar de Sahara-woestijn in Noord-Afrika. |')
 print('| Maar plotseling weet je je weg niet meer terug te vinden door de hitte van de zon...      |')
@@ -6,9 +8,8 @@ print('| denkt dat je de weg wel terug zal vinden. Je hebt een grote rugzak met 
 print('| water en je drink er 1 op wegens de dorst die door de hitte is veroorzaakt. Daarnaast heb |')
 print('| je een tent bij je en een slaapzak. Het is op dit moment het heetste moment van de dag... |')
 print('---------------------------------------------------------------------------------------------')
-Munten = 25
 from time import sleep
-sleep(20)
+sleep(15)
 print('Level-1: Je loopt al een eindje door het zand en er blijkt geen hoop te zijn. Wat doe je nu?')
 from time import sleep
 sleep(2.5)
@@ -35,6 +36,7 @@ if lvl1 == '1':
         print('Je schijnt je zaklamp op een reuze, giftige zandadder!')
         from time import sleep
         sleep(0.5)
+        print('Health = 100')
         print('1: Doodt het met een steen')
         print('2: Loop eromheen')
         lvl3 = input('')
@@ -58,7 +60,7 @@ if lvl1 == '1':
                 print('1: Koop de dolk')
                 print('2: Sla het aanbod af')
                 lvl5 = (input(''))
-                if lvl5 == '1':
+                if lvl5 == '1' and Munten >= 10:
                     print('Level-5: Je bent nu in bezit van een dolk en je wist een jager schorpioen te doden.')
                     from time import sleep
                     sleep(1.5)
@@ -109,7 +111,7 @@ if lvl1 == '1':
                         sleep(1.5)
                         print('1: Sla het bod af')
                         lvl7 = input('')
-                        if lvl7 == '1':
+                        if lvl7 == '1' and Munten <= 20:
                             print('Je saldo is helaas lager dan 20 munten en je moest de aanbod afslaan')
                             from time import sleep
                             sleep(1.5)
@@ -128,20 +130,36 @@ if lvl1 == '1':
                                 print('Je gebruikt je dolk die je had gekocht')
                                 from time import sleep
                                 sleep(1.5)
-                                print('Je verwondt er één en je hebt ze afgeschrikt')
+                                print('Je verwondt er één en je bent gestoken in je been')
                                 from time import sleep
                                 sleep(1.5)
-                                print('Dat betekent dat de oase van jou is')
-                                from time import sleep
-                                sleep(1.5)
-                                print('De oase ligt toevallig naast een handelsroute - iets waarvan jij gebruik van kan maken!')
-                                from time import sleep
-                                sleep(1.5)
-                                print('Win!')
+                                print('Health = 60, Level-9')
+                                print('1: Gebruik een pijlenboog die je op de grond ziet')
+                                print('2: Gebruik je dolk')
+                                lvl9 = input('')
+                                if lvl9 == '1':
+                                    print('Je grijpt naar de pijlenboog van de grond')
+                                    from time import sleep
+                                    sleep(1,5)
+                                    print('Je schiet er 2 neer en verjaagt de rest')
+                                    from time import sleep
+                                    sleep(1,5)
+                                    print('De oase is nu vrij van elk gevaar')
+                                    from time import sleep
+                                    sleep(1.5)
+                                    print('De oase ligt toevallig naast een handelsroute - iets waarvan jij gebruik van kan maken!')
+                                    from time import sleep
+                                    sleep(1.5)
+                                    print('Win!')
+                                elif lvl9 == '2':
+                                    print('Je gebruikt je dolk maar die breekt in het midden van de gevecht')
+                                    from time import sleep
+                                    sleep(2)
+                                    print('Health = 0, game over!')
                             else:
                                 ('Type a.u.b een gegeven keuze')
                 elif lvl5 == '2':
-                    print('Je hebt de aanbod afgewezen')
+                    print('Je hebt de aanbod afgewezen, of je hebt te weinig munten.')
                     from time import sleep
                     sleep(1.5)
                     print('Level-6: Je loopt verder en je komt weer een zandadder tegen!')
