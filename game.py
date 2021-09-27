@@ -60,7 +60,8 @@ if lvl1 == '1':
                 print('1: Koop de dolk')
                 print('2: Sla het aanbod af')
                 lvl5 = (input(''))
-                if lvl5 == '1' and Munten >= 10:
+                if lvl5 == '1':
+                    Munten = 25 - 10
                     print('Level-5: Je bent nu in bezit van een dolk en je wist een jager schorpioen te doden.')
                     from time import sleep
                     sleep(1.5)
@@ -133,6 +134,7 @@ if lvl1 == '1':
                                 print('Je verwondt er één en je bent gestoken in je been')
                                 from time import sleep
                                 sleep(1.5)
+                                Health = 100 - 40
                                 print('Health = 60, Level-9')
                                 print('1: Gebruik een pijlenboog die je op de grond ziet')
                                 print('2: Gebruik je dolk')
@@ -152,6 +154,7 @@ if lvl1 == '1':
                                     sleep(1.5)
                                     print('Win!')
                                 elif lvl9 == '2':
+                                    Health = 60 - 60
                                     print('Je gebruikt je dolk maar die breekt in het midden van de gevecht')
                                     from time import sleep
                                     sleep(2)
